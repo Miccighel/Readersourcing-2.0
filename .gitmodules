@@ -1,0 +1,9 @@
+[submodule "RS_PDF"]
+	path = RS_PDF
+	url = https://github.com/Miccighel/Readersourcing-2.0-RS_PDF.git
+[submodule "RS_Server"]
+	path = RS_Server
+	url = https://github.com/Miccighel/Readersourcing-2.0-RS_Server.git
+[submodule "RS_Rate"]
+	path = RS_Rate
+	url = https://github.com/Miccighel/Readersourcing-2.0-RS_Rate.git
