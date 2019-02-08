@@ -1,6 +1,6 @@
 <h1>Info</h1>
 
-This is the official repository of the **Readersourcing 2.0 ecosystem** which has been presented for the first time during the <a href="https://ircdl2019.isti.cnr.it/">IRCDL 2019</a> conference. The original article can be freely read on <a href="https://zenodo.org/record/1446468">Zenodo</a>. This repository is an aggregation of <a href="https://git-scm.com/book/it/v2/Git-Tools-Submodules">Git Submodules</a>, which means that each of three folders is a pointer to a different repository, where each of them is a software component of Readersourcing 2.0. This README is an aggregation of the READMEs of these software components, so it is possible to consult it here in its entirety or independently in the aggregated repositories. 
+This is the official repository of the **Readersourcing 2.0 ecosystem** which has been presented for the first time during the <a href="https://ircdl2019.isti.cnr.it/">IRCDL 2019</a> conference. The original article can be freely read on <a href="https://zenodo.org/record/1446468">Zenodo</a>. This repository is an aggregation of <a href="https://git-scm.com/book/it/v2/Git-Tools-Submodules">Git Submodules</a>, which means that each of three folders is a pointer to a different repository, where each of them represents a software component of Readersourcing 2.0. This README is an aggregation of the READMEs of these software components, so it is possible to consult it here in its entirety or independently in the aggregated repositories. 
 
 <h2>.bib record</h2>
 
