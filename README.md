@@ -2,23 +2,40 @@
 
 This is the official repository of the **Readersourcing 2.0 ecosystem** which has been presented for the first time during the <a href="https://ircdl2019.isti.cnr.it/">IRCDL 2019</a> conference. The original article can be freely read on <a href="https://zenodo.org/record/1446468">Zenodo</a>. This repository is an aggregation of <a href="https://git-scm.com/book/it/v2/Git-Tools-Submodules">Git Submodules</a>, which means that each of three folders is a pointer to a different repository, where each of them is a software component of Readersourcing 2.0. This README is an aggregation of the READMEs of these software components, so it is possible to consult it here in its entirety or independently in the aggregated repositories. 
 
+<h2>.bib record</h2>
+
+```
+@InProceedings{
+  10.1007/978-3-030-11226-4_21,
+  author="Soprano, Michael and Mizzaro, Stefano",
+  editor="Manghi, Paolo and Candela, Leonardo and Silvello, Gianmaria",
+  title="Crowdsourcing Peer Review: As We May Do",
+  booktitle="Digital Libraries: Supporting Open Science",
+  year="2019",
+  publisher="Springer International Publishing",
+  address="Cham",
+  pages="259--273",
+}
+```
+
+<h1>Useful Links</h1>
+
+- <a href="https://zenodo.org/record/1446468">Original Article</a>
+- <a href="https://github.com/Miccighel/Readersourcing-2.0-TechnicalDocumentation"> Technical Documentation (GitHub)</a>
+- <a href="https://web.postman.co/collections/4632696-c26fc049-7021-4691-beb3-97cebfb60adb?workspace=8a3ef37e-60b1-4b49-8782-e73d2a6e3a8c">RESTful API Interface</a>
+- <a href="https://doi.org/10.5281/zenodo.1442630">Zenodo Record (RS_Server)</a>
+- <a href="https://doi.org/10.5281/zenodo.1442597">Zenodo Record (RS_PDF)</a>
+- <a href="https://doi.org/10.5281/zenodo.1442599">Zenodo Record (RS_Rate)</a>
+
 <h1>RS_Server</1>
 
 <h2>Read this!</h2>
 
 Please, note that this is an early alpha release and it is not ready for the use in a production environment.
 
-<h2>Useful Links</h2>
-
-- <a href="https://zenodo.org/record/1446468">Original Article</a>
-- <a href="https://zenodo.org/record/1452397">Technical Documentation (Zenodo)</a>
-- <a href="https://github.com/Miccighel/Readersourcing-2.0-TechnicalDocumentation"> Technical Documentation (GitHub)</a>
-- <a href="https://web.postman.co/collections/4632696-c26fc049-7021-4691-beb3-97cebfb60adb?workspace=8a3ef37e-60b1-4b49-8782-e73d2a6e3a8c">RESTful API Interface</a>
-- <a href="https://doi.org/10.5281/zenodo.1442630">Zenodo Record</a>
-
 <h2>Description</h2>
 
-RS_Server is the server-side application which has the task to collect and aggregate the ratings given by readers and to use the Readersourcing models to compute quality scores for readers and publications. An instance of RS_Server is deployed along one of <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_PDF">RS_PDF</a>. Then, there are up to n different browsers along with their end-users, which communicate with the server-side application itself; each of them is characterized by an instance of <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_Rate">RS_Rate</a>. This setup means that every interaction between readers and server can be carried out through clients installed on readers' browsers or by using the stand-alone web interface provided by RS_Server and these clients have to handle the registration and authentication of readers, the rating action and the download action of link-annotated publications.
+**RS_Serve** is the server-side application which has the task to collect and aggregate the ratings given by readers and to use the Readersourcing models to compute quality scores for readers and publications. An instance of RS_Server is deployed along one of <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_PDF">RS_PDF</a>. Then, there are up to n different browsers along with their end-users, which communicate with the server-side application itself; each of them is characterized by an instance of <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_Rate">RS_Rate</a>. This setup means that every interaction between readers and server can be carried out through clients installed on readers' browsers or by using the stand-alone web interface provided by RS_Server and these clients have to handle the registration and authentication of readers, the rating action and the download action of link-annotated publications.
 
 <h2>Deploy</h2>
 
@@ -140,16 +157,9 @@ To set an environment variabile in an Heroku app, simply follow <a href="https:/
 
 Please, note that this is an early alpha release and it is not ready for the use in a production environment.
 
-<h2>Useful Links</h2>
-
-- <a href="https://zenodo.org/record/1446468">Original Article</a>
-- <a href="https://zenodo.org/record/1452397">Technical Documentation (Zenodo)</a>
-- <a href="https://github.com/Miccighel/Readersourcing-2.0-TechnicalDocumentation"> Technical Documentation (GitHub)</a>
-- <a href="https://doi.org/10.5281/zenodo.1442597">Zenodo Record</a>
-
 <h2>Description</h2>
 
-RS_PDF is the software library which is exploited by <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_Server">RS_Server</a> to actually edit the PDF files to add the URL required when a reader requests to save for later the publication that he is reading. It is a software characterized by a command line interface and this means that RS_Server can use it directly since they are deployed one along the other, without using complex communication channels and paradigms.
+**RS_PDF** is the software library which is exploited by <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_Server">RS_Server</a> to actually edit the PDF files to add the URL required when a reader requests to save for later the publication that he is reading. It is a software characterized by a command line interface and this means that RS_Server can use it directly since they are deployed one along the other, without using complex communication channels and paradigms.
 
 <h2>Installation</h2>
 
@@ -180,3 +190,24 @@ The behavior of RS_PDF is configured during its startup phase by RS_Server throu
 | ```--u``` | ```--url``` | Url to add. | A valid URL. | Yes | No |
 | ```--a``` | ```--authToken``` | Authentication token received from RS_Server. | A valid authentication token received RS_Server. | No | ```--pOut --pIn --pId``` |
 | ```--pId``` | ```--publicationId``` | Identifier for a publication present on RS_Server. | A valid publication identifier received from RS_Server. | No | ```--pOut --pIn --a``` |
+
+<h1>RS_Rate</h1>
+
+<h2>Read this!</h2>
+
+Please, note that this is an early alpha release and it is not ready for the use in a production environment.
+
+<h2>Description</h2>
+
+ **RS_Rate** is an extension for Google Chrome and it is a client that readers can use to rate publications, althought it is possible to carry out every operation also directly on the web interface provided by <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_Server">RS_Server</a>. We intend to generalize RS_Rate by providing an implementation for each of the major browsers (i.e., Firefox, Safari, . . . ).
+
+<h2>Installation</h2>
+
+RS_Rate is freely available on the main browsers webstores. To use it, simply take advantage of the following links and install the version for your favourite browser.
+
+- Google Chrome: <a href="https://chrome.google.com/webstore/detail/readersourcing-20-rsrate/hlkdlngpijhdkbdlhmgeemffaoacjagg?hl=it">Available here</a>
+- Firefox: (Currently disabled, will be available at a later time)
+
+<h2>Usage</h2>
+
+If you need some explanations regarding RS_Rate, please refer to the technical documentation pointed above. You will find and overview of its user interface, functionalities and usage.
