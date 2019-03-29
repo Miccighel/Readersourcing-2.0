@@ -20,6 +20,7 @@ This is the official repository of the **Readersourcing 2.0 ecosystem** which ha
 
 <h1>Useful Links</h1>
 
+- <a href="https://readersourcing.org">Readersourcing 2.0 (Web Interface)</a>
 - <a href="https://zenodo.org/record/1446468">Original Article</a>
 - <a href="https://github.com/Miccighel/Readersourcing-2.0-TechnicalDocumentation"> Technical Documentation (GitHub)</a>
 - <a href="https://web.postman.co/collections/4632696-c26fc049-7021-4691-beb3-97cebfb60adb?workspace=8a3ef37e-60b1-4b49-8782-e73d2a6e3a8c">RESTful API Interface</a>
@@ -47,7 +48,7 @@ This deploy modality allows to manually downwload and start RS_Server locally to
 
 <h4>Requirements</h4>
 
- - <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> >= 2.4.4;
+ - <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> >= 2.5.3;
  - <a href="https://www.java.com/it/download/">JRE (Java Runtime Environment)</a> >= 1.8.0;
  - <a href="https://www.postgresql.org/download/">PostgreSQL</a> >= 10.5.
  
@@ -131,8 +132,7 @@ Regardless of the chosen deploy modality, there is the need to set some environm
 | SENDGRID_PASSWORD  | Password of your SendGrid account | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App|
 | SENDGRID_API_KEY  | API key of your SendGrid account | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App|
 | SENDGRID_DOMAIN  | A domain registered within your SendGrid account | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App|
-| RECAPTCHA_SECRET_KEY  | Private key used by Google ReCAPTCHA v2 within a registered domain | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App|
-| RECAPTCHA_SITE_KEY  | API key of your Google ReCAPTCHA v2 account | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App|
+| BUG_REPORT_MAIL | An email address to receive bug reports | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App |
 | RAILS_LOG_TO_STD  | If set to ```true```, Rails writes its logs to the standard output. Useful for debugging purposes. | 3 | production | ```.env``` file, Heroku App |
 
 <h4>.env File</h4>
@@ -161,24 +161,15 @@ Please, note that this is an early alpha release and it is not ready for the use
 
 **RS_PDF** is the software library which is exploited by <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_Server">RS_Server</a> to actually edit the PDF files to add the URL required when a reader requests to save for later the publication that he is reading. It is a software characterized by a command line interface and this means that RS_Server can use it directly since they are deployed one along the other, without using complex communication channels and paradigms.
 
-<h2>Installation</h2>
+<h2>Installation</h1>
 
 RS_PDF comes bundled with RS_Server, so when the latter is deployed there is no need to manually install the former. Nevertheless, it is possible to use it independently; it is sufficient to download the attached .jar files from the release section of this repository and place it somewhere on your filesystem. 
 
-<h2>Requirements</h2>
+<h2>Requirements</h1>
 
  - <a href="https://www.java.com/it/download/">JRE (Java Runtime Environment)</a> >= 1.8.0;
 
-<h2>Usage</h2>
-
-The usage of RS_PDF is quite simple. To provide an execution example, let's assume a scenario in which there is the need of edit some files encoded in PDF format with the following prerequisites:
-- there is a folder containing `n` files to edit at path ```C:\data```;
-- the edited files must be saved inside a folder at path ```C:\out```;
-- the file in JAR format containing the library is called ```RS_PDF-v1.0-alpha.jar```;
-- the JAR file containing RS_PDF is located inside the folder at path ```C:\lib```;
-The execution of RS\_PDF is started with the command: ```java -jar C:\lib\RS_PDF-v1.0-alpha.jar -pIn C:\data -pOut C:\out```.
-
-<h2>Command Line Interface (CLI)</h2>
+<h2>Command Line Interface (CLI)</h1>
 
 The behavior of RS_PDF is configured during its startup phase by RS_Server through a set of special command-line options. For this reason, it is useful to provide a list of all the options that can be used if it is necessary to use RS_PDF in other contexts, modify its implementation or for any other reason. However, it is designed to work with a default configuration if no options are provided. This list of command line options in shown in the following table:
 
@@ -191,6 +182,13 @@ The behavior of RS_PDF is configured during its startup phase by RS_Server throu
 | ```--a``` | ```--authToken``` | Authentication token received from RS_Server. | A valid authentication token received RS_Server. | No | ```--pOut --pIn --pId``` |
 | ```--pId``` | ```--publicationId``` | Identifier for a publication present on RS_Server. | A valid publication identifier received from RS_Server. | No | ```--pOut --pIn --a``` |
 
+To provide an execution example, let's assume a scenario in which there is the need of edit some files encoded in PDF format with the following prerequisites:
+- there is a folder containing `n` files to edit at path ```C:\data```;
+- the edited files must be saved inside a folder at path ```C:\out```;
+- the file in JAR format containing the library is called ```RS_PDF-v1.0-alpha.jar```;
+- the JAR file containing RS_PDF is located inside the folder at path ```C:\lib```;
+The execution of RS\_PDF is started with the command: ```java -jar C:\lib\RS_PDF-v1.0-alpha.jar -pIn C:\data -pOut C:\out```.
+
 <h1>RS_Rate</h1>
 
 <h2>Read this!</h2>
@@ -199,7 +197,7 @@ Please, note that this is an early alpha release and it is not ready for the use
 
 <h2>Description</h2>
 
- **RS_Rate** is an extension for Google Chrome and it is a client that readers can use to rate publications, althought it is possible to carry out every operation also directly on the web interface provided by <a href="https://github.com/Miccighel/Readersourcing-2.0-RS_Server">RS_Server</a>. We intend to generalize RS_Rate by providing an implementation for each of the major browsers (i.e., Firefox, Safari, . . . ).
+**RS_Rate** is an extension for Google Chrome vailable on its store. It is a client for Readersourcing 2.0 that can be used by readers of publications to rate them directly from the browser without the need of using this web interface. We intend to generalize RS_Rate by providing an implementation for each of the major browsers (i.e., Firefox, Safari, ...
 
 <h2>Installation</h2>
 
