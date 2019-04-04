@@ -7,6 +7,9 @@
 [submodule "RS_Rate"]
 	path = RS_Rate
 	url = https://github.com/Miccighel/Readersourcing-2.0-RS_Rate.git
-[submodule "TechnicalDocumentation"]
-	path = TechnicalDocumentation
-	url = https://github.com/Miccighel/Readersourcing-2.0-TechnicalDocumentation.git
+[submodule "RS_Py"]
+	path = RS_Py
+	url = https://github.com/Miccighel/RS_Py.git
+[submodule "RS_TechnicalDocumentation"]
+	path = RS_Py
+	url = https://github.com/Miccighel/Readersourcing-2.0-TechnicalDocumentation
