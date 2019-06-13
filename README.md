@@ -28,6 +28,7 @@ This is the official repository of the **Readersourcing 2.0 ecosystem** which ha
 - <a href="https://doi.org/10.5281/zenodo.1442597">Zenodo Record (RS_PDF)</a>
 - <a href="https://doi.org/10.5281/zenodo.1442599">Zenodo Record (RS_Rate)</a>
 - <a href="https://zenodo.org/record/3245209">Zenodo Record (RS_Py)</a>
+- <a href="https://doi.org/10.5281/zenodo.1443370">Zenodo Record (Technical Documentation)</a>
 
 <h1>RS_Server</1>
 
