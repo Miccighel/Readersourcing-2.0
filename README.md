@@ -27,6 +27,7 @@ This is the official repository of the **Readersourcing 2.0 ecosystem** which ha
 - <a href="https://doi.org/10.5281/zenodo.1442630">Zenodo Record (RS_Server)</a>
 - <a href="https://doi.org/10.5281/zenodo.1442597">Zenodo Record (RS_PDF)</a>
 - <a href="https://doi.org/10.5281/zenodo.1442599">Zenodo Record (RS_Rate)</a>
+- <a href="https://zenodo.org/record/3245209">Zenodo Record (RS_Py)</a>
 
 <h1>RS_Server</1>
 
@@ -212,3 +213,21 @@ RS_Rate is freely available on the main browsers webstores. To use it, simply ta
 <h2>Usage</h2>
 
 If you need some explanations regarding RS_Rate, please refer to the technical documentation pointed above. You will find and overview of its user interface, functionalities and usage.
+
+<h1>RS_Py</1>
+
+<h2>Read this!</h2>
+
+Please, note that this is an early alpha release and it is not ready for the use in a production environment.
+
+<h2>Description</h2>
+
+**RS_Py** is an additional component of the Readersourcing 2.0 ecosystem which provides a fully-working implementation of two Readersourcing models which are incapsulated by the server-side application of Readersourcing 2.0. Developers with a background in Python programming language can take advantage of RS_Py to generate and test new simulations of ratings given by readers to a set of publications and they are allowed to alter the internal logic of the models to test new approaches without the need to fork and edit the full implementation of Readersourcing 2.0.
+
+<h2>Installation</h2>
+
+To use RS_Py notebooks it is suffcient to clone its repository and place it somewher eon the filesystem. Be sure to install the required Python packages by taking advantage of a distribution like Anaconda.  If a lightweight installation is preferred, an instance of Python 3.7.3 is needed to install the required packages like Jupyter, Pandas and others.
+
+<h2>Usage</h2>
+
+If you need some explanations regarding RS_Py, please refer to the documentation pointed above.
