@@ -23,7 +23,7 @@ This is the official repository of the **Readersourcing 2.0 ecosystem** which ha
 - <a href="https://readersourcing.org">Readersourcing 2.0 (Web Interface)</a>
 - <a href="https://zenodo.org/record/1446468">Original Article</a>
 - <a href="https://github.com/Miccighel/Readersourcing-2.0-TechnicalDocumentation"> Technical Documentation (GitHub)</a>
-- <a href="https://web.postman.co/collections/4632696-c26fc049-7021-4691-beb3-97cebfb60adb?workspace=8a3ef37e-60b1-4b49-8782-e73d2a6e3a8c">RESTful API Interface</a>
+- <a href="https://documenter.getpostman.com/view/4632696/RWTiwfV4?version=latest">RESTful API Interface</a>
 - <a href="https://doi.org/10.5281/zenodo.1442630">Zenodo Record (RS_Server)</a>
 - <a href="https://doi.org/10.5281/zenodo.1442597">Zenodo Record (RS_PDF)</a>
 - <a href="https://doi.org/10.5281/zenodo.1442599">Zenodo Record (RS_Rate)</a>
