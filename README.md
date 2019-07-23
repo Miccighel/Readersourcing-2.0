@@ -138,6 +138,7 @@ Regardless of the chosen deploy modality, there is the need to set some environm
 | SENDGRID_API_KEY  | API key of your SendGrid account | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App|
 | SENDGRID_DOMAIN  | A domain registered within your SendGrid account | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App|
 | BUG_REPORT_MAIL | An email address to receive bug reports | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App |
+| CONTACT_MAIL | An email address to receive general questions | 1 - 2 (Scenario 1, Scenario 2) - 3 | development, production | ```.env``` file , Heroku App |
 | RAILS_LOG_TO_STD  | If set to ```true```, Rails writes its logs to the standard output. Useful for debugging purposes. | 3 | production | ```.env``` file, Heroku App |
 
 <h4>.env File</h4>
@@ -150,6 +151,8 @@ SENDGRID_USERNAME=your_sendgrid_username
 SENDGRID_PASSWORD=your_sendgrid_password
 SENDGRID_DOMAIN=your_sendgrid_domain
 SENDGRID_API_KEY=your_sendgrid_secret_api_key
+BUG_REPORT_MAIL=your_bug_report_mail
+CONTACT_MAIL=your_contact_mail
 ```
 
 <h4>Heroku App</h4>
