@@ -113,7 +113,7 @@ This deploy modality allows to exploit the container registry of **Heroku** to p
 
 Clone this repository and move inside the main directory using a command line prompt. Now, type ```ls``` or ```dir```; you should see a ```Dockerfile```. If you do not see it, please be sure to be in the main directory of the cloned repository. Before proceeding, _be sure that your Docker Engine has been started up, otherwise the following commands will not work_. Log in to your Heroku account by typing ```heroku login``` and insert your credentials. Next, log in to Heroku container registry by typing ```heroku container:login```. To build and upload your instance of RS_Server type ```heroku container:push web --app your-app-name``` and when the process terminates type ```heroku container:release web``` to make it publicy accessible. Optionally, you can type ```heroku open``` to open the browser and be redirected on the homepage of  ```your_app_name``` application. To create and set up the database type ```heroku run rake db:create``` and ```heroku run rake db:migrate```. As you can see, there is no need to start the server by specifing its ip address, port and environment, since Heroku (through the Docker Engine) will take care of that for you. Now, remember to set the required environment variables on your Heroku app as explained in the **environment variables** section.
 
-<h4>Quick Cheatsheet</h4>
+<h4>Quick Cheatsheet</h3>
 
 - ```cd``` to main directory;
 - ```heroku login```;
@@ -121,8 +121,8 @@ Clone this repository and move inside the main directory using a command line pr
 - ```heroku container:push web --app your-app-name```;
 - ```heroku container:release web --app your-app-name```;
 - ```heroku open --app your-app-name``` (optional);
-- ```heroku run rake db:create --app your-app-name```;
-- ```heroku run rake db:migrate --app your-app-name```;
+- ```heroku run rake db:migrate -e production --app your-app-name``` (optional);
+- ```heroku run rake db:seed -e production --app your-app-name``` (optional);
 - set environment variables on your Heroku app.
 
 <h3>Environment Variables</h3>
