@@ -1,20 +1,25 @@
 <h1>Info</h1>
 
-This is the official repository of the **Readersourcing 2.0 ecosystem** which has been recently presented during the <a href="https://ircdl2019.isti.cnr.it/">IRCDL 2019</a> conference. The original article can be freely read on <a href="https://zenodo.org/record/1446468">Zenodo</a>. This repository is an aggregation of <a href="https://git-scm.com/book/it/v2/Git-Tools-Submodules">Git Submodules</a>, which means that each of three folders is a pointer to a different repository, where each of them represents a software component of Readersourcing 2.0. This README is an aggregation of the READMEs of these software components, so it is possible to consult it here in its entirety or independently in the aggregated repositories. 
+This is the official repository for the **Readersourcing 2.0 ecosystem**, recently introduced at the <a href="https://ircdl2019.isti.cnr.it/">IRCDL 2019</a> conference. The original article can be freely accessed on <a href="https://zenodo.org/record/1446468">Zenodo</a>. This repository aggregates <a href="https://git-scm.com/book/it/v2/Git-Tools-Submodules">Git Submodules</a>, indicating that each of the three folders serves as a pointer to a distinct repository. Each repository represents a software component of Readersourcing 2.0. This README consolidates the information from the individual READMEs of these software components. You can review it here in its entirety or independently within the aggregated repositories.
 
-<h2>.bib record</h2>
+<h2>Bibliographic Record</h2>
 
 ```
-@InProceedings{
-  10.1007/978-3-030-11226-4_21,
-  author="Soprano, Michael and Mizzaro, Stefano",
-  editor="Manghi, Paolo and Candela, Leonardo and Silvello, Gianmaria",
-  title="Crowdsourcing Peer Review: As We May Do",
-  booktitle="Digital Libraries: Supporting Open Science",
-  year="2019",
-  publisher="Springer International Publishing",
-  address="Cham",
-  pages="259--273",
+@inproceedings{10.1007/978-3-030-11226-4_21,
+  title        = {{Crowdsourcing Peer Review: As We May Do}},
+  author       = {Soprano, Michael and Mizzaro, Stefano},
+  year         = 2019,
+  month        = 1,
+  booktitle    = {{Digital Libraries: Supporting Open Science}},
+  location     = {Pisa, Italy},
+  publisher    = {{Springer}},
+  series       = {{Communications in Computer and Information Science}},
+  volume       = {{988}},
+  pages        = {{259--273}},
+  doi          = {{10.1007/978-3-030-11226-4_21}},
+  editor       = {{Manghi, Paolo and Candela, Leonardo and Silvello, Gianmaria}},
+  keywords     = {{scholarly publishing, peer review, crowdsourcing}},
+  abstract     = {{This paper describes Readersourcing 2.0, an ecosystem providing an implementation of the Readersourcing approach proposed by Mizzaro [10]. Readersourcing is proposed as an alternative to the standard peer review activity that aims to exploit the otherwise lost opinions of readers. Readersourcing 2.0 implements two different models based on the so-called codetermination algorithms. We describe the requirements, present the overall architecture, and show how the end-user can interact with the system. Readersourcing 2.0 will be used in the future to study also other topics, like the idea of shepherding the users to achieve a better quality of the reviews and the differences between a review activity carried out with a single-blind or a double-blind approach.}}
 }
 ```
 
